@@ -54,6 +54,6 @@
 ;;;;;; go-errcheck ;;;;;;
 (require 'go-errcheck)
 (add-hook 'go-mode-hook (lambda ()
-			  (local-set-key (kbd "C-c C-e c") 'go-errcheck)))
-
-
+                          (local-set-key (kbd "C-c C-e c") 'go-errcheck)
+                          (setq tab-width 4)
+                          ))
