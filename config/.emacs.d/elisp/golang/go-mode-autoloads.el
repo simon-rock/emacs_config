@@ -64,10 +64,7 @@ with goflymake (see URL `https://github.com/dougm/goflymake'), gocode
 
 \(fn)" t nil)
 
-;(add-to-list 'auto-mode-alist (cons "\\.go\\'" 'go-mode))
-(setq auto-mode-alist (cons '("\\.go$" . go-mode) auto-mode-alist))
-(setq interpreter-mode-alist(cons '("go" . go-mode)
-interpreter-mode-alist))
+(add-to-list 'auto-mode-alist (cons "\\.go\\'" 'go-mode))
 
 (autoload 'gofmt-before-save "go-mode" "\
 Add this to .emacs to run gofmt on the current buffer when saving:
@@ -82,7 +79,7 @@ you save any file, kind of defeating the point of autoloading.
 Show Go documentation for a query, much like M-x man.
 
 \(fn QUERY)" t nil)
-(message  "loading go-mode")
+
 (autoload 'go-download-play "go-mode" "\
 Downloads a paste from the playground and inserts it in a Go
 buffer. Tries to look for a URL at point.
